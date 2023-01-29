@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="lo&fo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="bg d-flex flex-column justify-content-center">
+        <div id="sectionhome" class="bg">
+            <div class="cardm1">
+            <h1> LOST & FOUND </h1>
+            </div>
+            <p>A Single Place To Report All Lost And Found Items</p>
+            <div class="cardm3">    
+            <div class="d-flex flex-row justify-content-center">
+                <div class="card1" onclick="display('sectionlost')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDfwvUkX5QmbROGqeECfw_STmTqhDM6_8SODmwlvA&s"  height="200" width="200"class=" d-flex flex-row justify-content-center" />
+                    <h3>Lost</h3>
+                </div>
+                <div class="card1" onclick="display('sectionfound')">
+                    <img src="https://cdn6.f-cdn.com/contestentries/316003/10880430/566d03e32f2ef_thumb900.jpg"  height="200" width="200" class=" d-flex flex-row justify-content-center" />
+                    <h3>Found</h3>
+                </div>
+            <!--</div>
+            <div class="d-flex flex-row justify-content-center">-->
+                <div class="card1" onclick="display('sectionalllost')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6312/6312718.png"  height="200" width="200" class=" d-flex flex-row justify-content-center" />
+                    <h3>All lost Items</h3>
+                </div>
+                <div class="card1" onclick="display('sectionallfound')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8161/8161879.png"  height="200" width="200" class=" d-flex flex-row justify-content-center" />
+                    <h3>All Found Items</h3>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="card1" onclick="display('sectionreturned')">
+                    <img src="https://thumbs.dreamstime.com/b/return-policy-sign-exchange-goods-line-icon-return-arrow-delivery-box-illustration-eps-return-policy-sign-exchange-goods-159434492.jpg" height="200" width="200" class=" d-flex flex-row justify-content-center" />
+                    <h3>All Returned Items</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+        <style>
+            #font{
+                font-family: Impact;
+            }
+
+        </style>
+
+        <div id="sectionlost" class="bg">
+            <h3 id="font" style="background-color:#cfea00;">LOST</h3>
+            <h4>Enter The Details To Raise A Complaint</h4>
+        <div class="cardm3">
+            <br>
+        <form action="" method="get" name="myForm">
+        <label for="fname" >&emsp;Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        </form>
+        
+        <form method="post">
+        <label for="phone">&emsp;Phone Number:</label>
+        <input type="tel" id="phone" name="phone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required><br><br>
+        </form>
+        
+        <form method="post">
+        <label for="birthdaytime">&emsp;Date And Time When You Lost:</label>
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+        </form>
+        <br>
+        
+        <form method="itemname">
+        <label for="itname">&emsp;Place where you have lost the item:</label>
+        <input type="text" id="itname" name="itname"><br><br> 
+        </form>
+        
+        <form method="itemname">
+        <label for="itname">&emsp;Item Name:</label>
+        <input type="text" id="itname" name="itname"><br><br> 
+        </form>
+        
+        <form action="/action_page.php">
+        <label for="img">&emsp;Item Photo:</label>
+        <input type="file" id="img" name="img" accept="image/*"><br><br>
+        </form>
+        
+        <form method="lost">
+        <label for="LOstdes">&emsp;Description :</label>
+        <textarea id="LOstdes" name="LOstdes" rows="4" cols="50"></textarea>
+        </form>
+        <br>
+        <button type="submit" class="btn btn-dark" style="text-align:center">SUBMIT 
+        </button><br><br>
+            <button class="btn btn-dark" onclick="display('sectionhome')">Back</button>
+        </div>
+        </div>
+
+
+
+        <div id="sectionfound" class="bg">
+
+            <h3 id="font" style="background-color:#cfea00;">FOUND</h3>
+            <h4>Enter The Details To Raise A Slip</h4>
+        <div class="cardm3">
+            <br>
+        <form action="" method="get" name="myForm">
+        <label for="fname" >&emsp;Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        </form>
+        
+        <form method="post">
+        <label for="phone">&emsp;Phone Number:</label>
+        <input type="tel" id="phone" name="phone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required><br><br>
+        </form>
+        
+        <form method="post">
+        <label for="birthdaytime">&emsp;Date And Time When You Found:</label>
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+        </form>
+        <br>
+        
+        <form method="itemname">
+        <label for="itname">&emsp;Place where you have Found the item:</label>
+        <input type="text" id="itname" name="itname"><br><br> 
+        </form>
+        
+        <form method="itemname">
+        <label for="itname">&emsp;Item Name:</label>
+        <input type="text" id="itname" name="itname"><br><br> 
+        </form>
+        
+        <form action="/action_page.php">
+        <label for="img">&emsp;Item Photo:</label>
+        <input type="file" id="img" name="img" accept="image/*"><br><br>
+        </form>
+        
+        <form method="lost">
+        <label for="LOstdes">&emsp;Description :</label>
+        <textarea id="LOstdes" name="LOstdes" rows="4" cols="50"></textarea>
+        </form>
+        <br>
+        <button type="submit" class="btn btn-dark" style="text-align:center">SUBMIT 
+        </button><br><br>
+            <button class="btn btn-dark" onclick="display('sectionhome')">Back</button>
+        </div>
+        </div>
+
+
+        
+        <div id="sectionalllost" class="bg">
+            <h3 id="font" style="background-color:#cfea00;">ALL LOST ITEMS</h3>
+                <div class="bg2">
+                    <h2>List of Lost Items</h2>
+                    <div class="card2 d-flex flex-row">
+                        <img src="https://thumbs.dreamstime.com/b/car-key-icon-trendy-logo-concept-white-background-fr-smarthome-collection-suitable-use-web-apps-mobile-print-media-131171598.jpg" class="image2" />
+                        <div>
+                            <h2>Car Keys</h2>
+                            <p>Hyundai verna keys, Brown in colour with chrome outlining</p>
+                        </div>
+                    </div>
+                    <div class="card2 d-flex flex-row">
+                        <img src="https://media.istockphoto.com/id/1097819346/vector/fitness-mat-roll-flat-line-icon-yoga-carpet-sign-thin-linear-logo-for-sport-equipment-store.jpg?s=1024x1024&w=is&k=20&c=vdOU1sGZOFmrpjmnbRNm0OgRzEEKHD1ib61OKo4UnnI=" class="image2" />
+                        <div>
+                            <h2>Yoga mat</h2>
+                            <p>It stretches and relaxes your body, improves stamina and memory</p>
+                        </div>
+                    </div>
+                    <div class="card2 d-flex flex-row">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJH1xmzZI9MADgkBwXSPU6ZTz-egBDD9copQ&usqp=CAU" class="image2" />
+                        <div>
+                            <h2>Calculator</h2>
+                            <p>Black calulator with white cap, Casio-Bx11043, Pen marks on the cap </p>
+                        </div>
+                    </div>
+                    <div class="card2 d-flex flex-row">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/007/501/900/small/wallet-saving-money-solid-line-icon-illustration-logo-template-suitable-for-many-purposes-vector.jpg" class="image2" />
+                        <div>
+                            <h2>Naucita Wallet</h2>
+                            <p>Brown Wallet with a Gold Nautica logo, contain 2500 rupees cash and 3-4 cards</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-dark" onclick="display('sectionhome')">Back</button>
+                </div>
+        </div>
+        <div id="sectionallfound" class="bg">
+            <h3 id="font" style="background-color:#cfea00;">ALL FOUND ITEMS</h3> 
+            <br>
+            <div class="bg2">
+                <h2>List Of Items Found</h2>
+                <div class="card2 d-flex flex-row">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANsAAADmCAMAAABruQABAAAAjVBMVEX39/cAAAD////6+vru7u709PTp6emoqKjx8fH29vbs7Oy9vb3Z2dkfHx+vr68vLy+hoaEoKCiampre3t40NDTPz8/IyMhNTU1ycnJdXV1BQUG3t7fGxsbb29uCgoJsbGwWFhaTk5NGRkZhYWGFhYUQEBBvb29KSkobGxs6OjqNjY2EhIRVVVV6enorKyvU6SSTAAAKZUlEQVR4nO2deXeqPBCHYQYX3OperbbWtt5efbXf/+O9WkkyQFiCkJB7+P13rfccHkOSyWxxnEaNGjVq1KhRo1KEcBei6ScpWQhef79an9e702hw5TP9POUJob92iS6Lf4XuSjZ0I3pZgOnHKkPgfUbJbnqzf94hbGRkV60dy+ESBu1Xx67VcNBPJLtq0rMXDlt/0tBc971tKxws39PRrppZCYf4lUl21auFewHM5nnQXHdgGxzCOB+ZfXDgnXOjWQaXvvLHZY/9hXhRQ7MHDgYTVTTXXdoAp7KIUG3rD4cp5qPlcLA8FESrOxzCPpPg6SV2TGWq85xD7zmL7M8MANoj6+BgmTlop18vCUI7YezqCgfTTLQ5e3RsvVgEh7DLRHOn/MkRE2yyGm7i6GROtav65KwGCXtF7eCwe8yB5m7pORRWVsBhO5+VtQ89NiRYnbU6FWDSshfVwQ/9P0g4l9cIDtvZXpFAq/BTw6nmcAporjuKwO3lX3uth4NICS22UiTB1cL7hV7OuZbw1DWGw5bqOfQQ8bYmmDPRr+kXYq59LaShlwsu+jXtAhVvFtNPNxfcxGwgBDK8/Ql6auWac9GvaVWOk6hccycX3NFcfC4xZpitYyRkmrCJf5tiw1lhNNd9yQe3NmSg4M8DbO5HFO5N+rWdEbikI0pefUfh5KeCNwNwD0y2QM9ROPmiO9UOh+1H0Vz3HF0t5V6Jvm44/H6cLQaX4EPRbH0V3tkicOHXEp0P2bf0TjlclIIWm3MJlndLJ5ujeK7JDyedxhuNL+Wjyz9VZCuQvhEaNznVgG+6IhaKbLEcahs39MpEu9qWPn10lP1w2lbKQme2VDh6lpHOuIEmNuiUjHY98tBTaFfyha0etjIMkpgm4qXDV8nf+3rYQLq9Pqq/HE5qFehhyxFkK6bBPTcbpIdCLe/kQ+fRdE29W+mAfHvR4mbGnKl1hXT8XP+V/8XTgJYUm6hYcw12CQ6MoGk5COCTGbZF9dPN0Bvp/lSPVtqhTVUjDWxVrpEp+qh+tpXkRlBX9ZG4CnftdGnw4UGe3JgKdKwezdhCoiE2XKaLREVavMpm0F7+YWtLR7YClu9IyKOxjjcyITpWsZ61+CWTkh2rlR7XnZHdbaTHnWyCTVes28Q7qSsvyMBaoi1cWrB+6AGttMVutJuTQz/7ocpSSzObBhcJF6yzn6dEnXSGuPHhdBIV6TCRKVzxujZ16c660LhSajJIhPQ5Xj/1ZznpOsId9KaT/KqCYLBUOpd/AfefDrS9mXTQgqnXStJzHpXBVb+Dm6sKKFDqoCZdmSQSND+hBLYsac8DJWgVD5v2TVsfmv7UZIFW8QtpaPW/oTkcrbTM0JC0nmuS0KZYhdfryxwa8jyuMSQW1T8gEzUOMbQO3P5Z9iZucNQcXg7QgTtruXAG55qYYB1gH5UJZ3CFjKPdPi0PTksoKgGNrxwhu6E0OHPWiJOAVhqcORuSpJXHft9SjjwGW3qkoJUB92OwRF08vXRWPAq3M9ipV8TdEib8Y3Adc+9jNtpDcD8mu6GKup+UH7jwankx2TlauLVS352CcAaXfprClTEtisA9t61AKwI3NdphX6BlW3uoWKTzZLbXkaiSz2HIQlJfQrkM99YX1YM5fE9qaAfT7fz8ytBWpu8M4JMtD5pSJNx431NkTTKV0MbZeVG7GtyFEJRqhXJzbpfbxL9J0CCzx0Lf/N0qvAUf/ZWhPxme4l8laNT3IB00z/T7SPKbNuRZ7nVGUU9bCO3mfUjuHXqowaCJuhuavxiYln8jDUfCaE5KOeqqZX7QSN2NuCYEMVgm3sPtAWJot17mslSNiek97S5edyOsSNHLNVStJUO7/Q7xJJtTTS75YabhB0FjUY4L/fUFWsSWBr8TitPtjJr8RDy1iVcdiIjiOYTWT0C7/Q162/HXardbfXUWrTqsITfxjgJ81xZoH6EXMgXt9r/qd9UbMo8daWDN1oa5H9rtUtFqKGiz/YmlQmCXNU+bdG1GA2fPnpjFVdBjvYmGPYvREDY8+/MYQwtdG2UZGsKCJCEEayT2eEcpi9HERLsp8K4RNFqGBlub0NChVuDL6z+EFr7nsQPshRxK0ZZWodEq2Qs7YxG0V2tHDcklGx8DZh+RbtfEl4h4sgmNpI8fNtzyQ+9dggaLoVVo4jC5F6afFA188fJagYa94Gl3PfLqeX9jaEi7FFmBxoOHz+QgQpYRHmeH3to2NL6QzFLRMOQ6tgPNwWB7Jv4rcq0IQ4M2Sbub1+a+iXTxhURUiRBrhKNRp/i0PofNVPFDtgjUx9GwRUzN55kdgyYWEuL2ic01HJDbODp1cX1kii8kvN5AgtYTZOu6+KuyBd0AhHvmiKHF55qIzdTC551LiNwg8eI2JF/8uWl88W0ZNHp/Pc9kFWjcw43BR5Oa3X+VLISBiJSdU9DYHvFizesIHunUz+77kI4a2yPMFTepKWw/nVPQeB6GmbsX1IVdmsPDHQgCTQTbefGs8RuG8glnpAT9s83n2iSOxjNezeXuK4k2tXtaCgeCDI2nzxh6VmWJURsTBwJHo3l/7IxgMMNdRSLXc9UV08r7kaGxQJzmtg1FxRMQDksgvhEZmojsGqkkVxcEUcJnEm6SoiEsmffrYsmwBYvDEzleYlcy16DNLeR3A70NiogN2zYdjVjR143cjjeSHdfI4iBBQ9iSvtvmCnfVxLZiMWwSNGhTs8VoKriCmAUleoPL0KituetagsbDNfyuGRkauQP3sLXnYBOcV94FGg9ysHw7mmj2n+nU29wCHAWDxFKvJGikd9qHyUoZJSFu+OvHPoqjkXv4Rra8jlcycXlgMGwyNP5GvtmyhiD0ybWIw2Q07kCwZeF3YBFK97uHrkWOFknbZWeEsyVo6Ifyh1etZDTuQKjJzdlZCreO/x6w4IUEjRubttj99HalI9uKZXONGCSmL1/OKeLLf+LOfOzy2xtG1GgOPjNX/a8oBvHTR2GNyND4z6Dh1o9yxMJLY5Jc0ZKjsU53mu4ie1hs5SNhCrKMEDTw98GH+psjFlTgQhgSNJ+jiVwD8MfcsWeJA9lhbfFJwNefR9EQumzMXIssElZ7wt8zMtcCNIQ2bXdtrvmLsoIoDAvCxNGgF7pV2hK3/6+Cdf3CrJFjFC1c8mS8WFJFQVv8e8qPBC00aF++LcvIr4Iytl83XBwt1KD8zZ7sirvw7me8WVGkASFbIUGcfU49W47ZXEGJdgelaNxZt/esI3Oc4NbfERI0bgoHg+pOa1EqqSp2wumDBI0ZkLquxChZ7GC6cOJoDgYJaJYE16JipvLyJY7Ghs0W30hUbJEfxtF4KpOlw0bSzGJobJE01oL6UUXY6Kj5B7uHLXI3+/TW7eAuYN19bJ1tEbYxYKs9mw0W202H25G2ZKDFFWKTXa9sSwaaRLQ+SiprHAgSeelollRnyJV+PZa+654qkZ9y/69NDgSZ0JO0uDnMz5fpxrazaFwI/dPlqrev07Qz2mwXr+2uU68GDg+IdaO44fzK9AM1atSoUaNGjRo1atSokaL+B0srkVOrRk1yAAAAAElFTkSuQmCC" class="image2" />
+                    <div>
+                        <h2>scooty Keys</h2>
+                        <p>honda activa 6g keys</p>
+                    </div>
+                </div>
+                <div class="card2 d-flex flex-row">
+                    <img src="https://thumbs.dreamstime.com/b/plastic-bottle-full-water-label-white-background-flat-style-icon-vector-illustration-152070344.jpg" class="image2" />
+                    <div>
+                        <h2>water bottle</h2>
+                        <p>nike water bottle</p>
+                    </div>
+                </div>
+                <div class="card2 d-flex flex-row">
+                    <img src="https://static.vecteezy.com/system/resources/previews/013/062/523/original/glasses-logo-design-spectacles-icon-design-template-free-vector.jpg" class="image2" />
+                    <div>
+                        <h2>Glasses</h2>
+                        <p>transparent frame glasses</p>
+                    </div>
+                </div>
+                <div class="card2 d-flex flex-row">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4XYl1uflgF_y4XMLxKyf5a4JLXWP3HCNRdCH1c4KHigD1N5gm3xgX1g-xPvp1nybEsRA&usqp=CAU" class="image2" />
+                    <div>
+                        <h2>jacket</h2>
+                        <p>Brown H&M jacket</p>
+                    </div>
+                </div>
+                <button class="btn btn-dark" onclick="display('sectionhome')">Back</button>
+        </div>
+        </div>
+
+
+
+        <div id="sectionreturned" class="bg">
+            <h3 id="font" style="background-color:#cfea00;">RETURNED ITEMS</h3> 
+            <br>
+            <div class="bg2">
+                <h2>List Of All Returned Items</h2>
+                <div class="card2 d-flex flex-row">
+                    <img src="https://media.istockphoto.com/id/1152537181/vector/hand-hold-the-smartphone-vector-icon-for-graphic-design-logo-web-site-social-media-mobile.jpg?s=170667a&w=0&k=20&c=LRYebtGj1CV6nMuF52a-rh4LxHnQmelN87BN5XV5Esk=" class="image2" />
+                    <div>
+                        <h2>Phone</h2>
+                        <p>iPhone 14 Red color phone with black case</p>
+                    </div>
+                </div>
+                <div class="card2 d-flex flex-row">
+                    <img src="https://t3.ftcdn.net/jpg/02/31/88/66/360_F_231886636_uDDj731Ren8GAl8t4lZA0oZGQLMWZPOK.jpg" class="image2" />
+                    <div>
+                        <h2>Watch</h2>
+                        <p>Fossil Hybrid watch Grey color</p>
+                    </div>
+                </div>
+                <div class="card2 d-flex flex-row">
+                    <img src="https://png.pngtree.com/png-vector/20220520/ourmid/pngtree-fast-charger-icon-color-flat-png-image_4695756.png" class="image2" />
+                    <div>
+                        <h2>Charger</h2>
+                        <p>OnePlus 120 watt charger</p>
+                    </div>
+                </div>
+                <div class="card2 d-flex flex-row">
+                    <img src="https://media.istockphoto.com/id/1311824748/vector/pair-of-wireless-earbud-headphones-vector-icon.jpg?s=612x612&w=0&k=20&c=sdDUwDL1HbOHG1HkywPesrZapGERfKSfQQr7A6PbeRI=" class="image2" />
+                    <div>
+                        <h2>Earbuds</h2>
+                        <p>Samsung galaxy earbuds</p>
+                    </div>
+                </div>
+                <button class="btn btn-dark" onclick="display('sectionhome')">Back</button>
+        </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
